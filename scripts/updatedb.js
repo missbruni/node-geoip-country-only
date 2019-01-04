@@ -31,9 +31,17 @@ var tmpPath = path.join(__dirname, '..', 'tmp');
 var databases = [
 	{
 		type: 'country',
-		url: 'https://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip',
-		src: 'GeoIPCountryWhois.csv',
-		dest: 'geoip-country.dat'
+		url: 'https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country-CSV.zip',
+		src: [
+			'GeoLite2-Country-Locations-en.csv',
+			'GeoLite2-Country-Blocks-IPv4.csv',
+			'GeoLite2-Country-Blocks-IPv6.csv'
+		],
+		dest: [
+			'',
+			'geoip-country.dat',
+			'geoip-country6.dat'
+		]
 	},
 ];
 
